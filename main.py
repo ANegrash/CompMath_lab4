@@ -15,7 +15,7 @@ def print_help():
           "o [id]   - наложить дополнительный график. В качестве параметра передайте id одного из уравнений:")
     for i in range(1, 5):
         print("     " + str(i) + ": " + get_add_func_label(i))
-    print("     0: очистить все графики\n"
+    print("     0: удалить все дополнительные графики\n"
           "d        - удалить все точки\n"
           "v        - просмотреть введённые точки\n"
           "c        - посчитать полином\n"
@@ -25,7 +25,7 @@ def print_help():
 
 
 def print_err():
-    print("Некорректная команда. Для вывода списка возможных команд введите \"h\".")
+    print("Некорректная команда. Для просмотра списка возможных команд введите \"h\".")
 
 
 def add_arrs(arr1, arr2):
@@ -47,7 +47,7 @@ def compute_multi(arr, pair):
 
 
 def generate_basis_poly(lst, i):
-    ret = []  # coef array
+    ret = []
     xi = lst[i][0]
     for j in [x for x in range(len(lst)) if x != i]:
         xj = lst[j][0]
